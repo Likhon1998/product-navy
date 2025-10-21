@@ -1,20 +1,27 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\Admin\DashboardController;
 
-Route::get('/', [ProductController::class, 'index'])->name('home');
+// Redirect root to /products
+Route::redirect('/', '/products');
 
+// Public product listing page
+Route::get('/products', [ProductController::class, 'index'])->name('home');
 
-// Admin panel routes (only logged-in users)
-Route::middleware(['auth'])->prefix('admin')->group(function () {
-    Route::get('/products', [ProductController::class, 'adminIndex'])->name('admin.products.index');
-    Route::get('/products/create', [ProductController::class, 'create'])->name('admin.products.create');
-    Route::post('/products', [ProductController::class, 'store'])->name('admin.products.store');
-    Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('admin.products.destroy');
-    Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('admin.products.edit');
-    Route::put('/products/{product}', [ProductController::class, 'update'])->name('admin.products.update');
+// Admin panel routes (only for authenticated users)
+Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
 
+    // Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    // Products CRUD
+    Route::get('/products', [ProductController::class, 'adminIndex'])->name('products.index');
+    Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+    Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+    Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
+    Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
+    Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
 });
-
 
 require __DIR__.'/auth.php';

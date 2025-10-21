@@ -1,74 +1,91 @@
-@extends('layouts.app')
+@extends('layouts.admin')
+
+@section('title', 'All Products')
 
 @section('content')
-<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    <!-- CSS Links -->
+    <link href="{{ asset('assets/css/swiper-bundle.min.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('assets/css/fontawesome-all.min.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('assets/css/animate.min.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('assets/css/app-style.css') }}" rel="stylesheet"/>
+
+<div class="container-fluid py-3">
 
     <!-- Header -->
-    <div class="flex justify-between items-center mb-6 bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-4 rounded-lg shadow">
-        <h2 class="text-xl sm:text-2xl font-semibold">All Products</h2>
-        <a href="{{ route('admin.products.create') }}" 
-           class="bg-green-500 hover:bg-green-600 transition text-white px-4 py-2 sm:px-5 sm:py-2 rounded-lg shadow text-sm sm:text-base">
-           + Add Product
+    <div class="d-flex justify-content-between align-items-center mb-3 bg-white shadow-sm rounded p-2 small">
+        <h1 class="h6 mb-0 fw-semibold text">All Products</h1>
+        <a href="{{ route('admin.products.create') }}" class="btn btn-info btn-sm py-1 px-2">
+            <i class="fas fa-plus me-1"></i> Add Product
         </a>
     </div>
 
     <!-- Success Message -->
     @if(session('success'))
-        <div class="mb-4 p-2 sm:p-3 bg-green-100 text-green-800 text-sm sm:text-base rounded-lg shadow">
-            {{ session('success') }}
+        <div class="alert alert-success alert-dismissible fade show small py-2 mb-2" role="alert">
+            <i class="fas fa-check-circle me-1"></i>{{ session('success') }}
+            <button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
 
     <!-- Products Table -->
-    <div class="overflow-x-auto bg-white shadow rounded-lg">
-        <table class="min-w-full divide-y divide-gray-200 text-sm">
-            <thead class="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-                <tr>
-                    <th class="px-4 py-2 text-left font-semibold uppercase tracking-wide">Image</th>
-                    <th class="px-4 py-2 text-left font-semibold uppercase tracking-wide">Name</th>
-                    <th class="px-4 py-2 text-left font-semibold uppercase tracking-wide">Category</th>
-                    <th class="px-4 py-2 text-left font-semibold uppercase tracking-wide">Price (৳)</th>
-                    <th class="px-4 py-2 text-left font-semibold uppercase tracking-wide">Action</th>
-                </tr>
-            </thead>
-            <tbody class="bg-white divide-y divide-gray-200">
-                @forelse($products as $product)
-                <tr class="hover:bg-gray-50 transition">
-                    <td class="px-4 py-2">
-                        @if($product->product_image)
-                            <img src="{{ asset('storage/' . $product->product_image) }}" 
-                                 class="h-10 w-10 object-cover rounded border border-gray-200">
-                        @else
-                            <span class="text-gray-400 italic text-xs">No image</span>
-                        @endif
-                    </td>
-                    <td class="px-4 py-2 font-medium text-gray-800">{{ $product->product_name }}</td>
-                    <td class="px-4 py-2 text-gray-600">{{ $product->category }}</td>
-                    <td class="px-4 py-2 font-semibold text-gray-900">৳ {{ number_format($product->price, 2) }}</td>
-                    <td class="px-4 py-2 space-x-1">
-                        <a href="{{ route('admin.products.edit', $product) }}" 
-                           class="bg-yellow-400 hover:bg-yellow-500 text-white px-2 py-1 rounded text-xs shadow">
-                           Edit
-                        </a>
-                        <form method="POST" action="{{ route('admin.products.destroy', $product) }}" class="inline">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" 
-                                    onclick="return confirm('Are you sure you want to delete this product?')" 
-                                    class="bg-red-600 hover:bg-red-700 text-white px-2 py-1 rounded text-xs shadow">
-                                Delete
-                            </button>
-                        </form>
-                    </td>
-                </tr>
-                @empty
-                <tr>
-                    <td colspan="5" class="px-4 py-2 text-center text-gray-500 italic">No products found</td>
-                </tr>
-                @endforelse
-            </tbody>
-        </table>
+    <div class="card shadow-sm border-0">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-sm table-hover align-middle text-center mb-0 small">
+                    <thead class="table-light text-muted">
+                        <tr>
+                            <th scope="col" class="fw-semibold">#</th>
+                            <th scope="col" class="fw-semibold">Image</th>
+                            <th scope="col" class="fw-semibold">Name</th>
+                            <th scope="col" class="fw-semibold">Category</th>
+                            <th scope="col" class="fw-semibold">Price</th>
+                            <th scope="col" class="fw-semibold text-center">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @forelse($products as $index => $product)
+                        <tr>
+                            <td>{{ $index + 1 }}</td>
+                            <td>
+                                @if($product->product_image)
+                                    <img src="{{ asset('storage/' . $product->product_image) }}" 
+                                         class="rounded img-thumbnail mx-auto d-block"
+                                         style="height: 35px; width: 35px; object-fit: cover;">
+                                @else
+                                    <span class="text-muted fst-italic small">No image</span>
+                                @endif
+                            </td>
+                            <td class="fw-semibold text-start">{{ $product->product_name }}</td>
+                            <td>{{ $product->category }}</td>
+                            <td class="fw-semibold text-success">{{ number_format($product->price, 2) }}</td>
+                            <td>
+                                <div class="d-flex justify-content-center gap-1">
+                                    <a href="{{ route('admin.products.edit', $product) }}" 
+                                       class="btn btn-info btn-sm py-0 px-2">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+                                    <form method="POST" action="{{ route('admin.products.destroy', $product) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit"
+                                                onclick="return confirm('Are you sure you want to delete this product?')"
+                                                class="btn btn-danger btn-sm py-0 px-2">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                        @empty
+                        <tr>
+                            <td colspan="6" class="text-muted fst-italic py-2 small">No products found</td>
+                        </tr>
+                        @endforelse
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-
 </div>
 @endsection
