@@ -1,13 +1,11 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Admin\DashboardController;
 
-// Redirect root to /products
-Route::redirect('/', '/products');
 
-// Public product listing page
-Route::get('/products', [ProductController::class, 'index'])->name('home');
+Route::get('/', [ProductController::class, 'index'])->name('home');
 
 // Admin panel routes (only for authenticated users)
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
@@ -22,6 +20,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
     Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
     Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
+
 });
 
 require __DIR__.'/auth.php';
