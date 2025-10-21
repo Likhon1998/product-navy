@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Products</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Tiro+Bangla:ital@0;1&display=swap"
+          rel="stylesheet">
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet"/>
+    <link href="assets/css/fontawesome-all.min.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/css/animate.min.css" rel="stylesheet"/>
+    <link href="assets/css/app-style.css" rel="stylesheet"/>
+</head>
+<body>
+
+<div class="preloader-wrapper">
+    <div class="preloader"></div>
+</div>
+
+<div class="floating-menu-wrapper">
+    <div class="floating-menu-inner">
+        <button class="close-floating-menu">
+            <i class="fas fa-close"></i>
+        </button>
+        <div class="menu-container" id="menu-container">
+            <!-- Menu levels will be dynamically injected here -->
+        </div>
+    </div>
+</div>
+
+<header class="site-header">
+    <div class="main-header">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col">
+                    <div class="localization-trigger">
+                        <button class="lang-btn-en" onclick="toggleLanguage('en')">En</button>
+                        <button class="lang-btn-bn" onclick="toggleLanguage('bn')">Bn</button>
+                    </div>
+                </div>
+            </div>
+            <div class="main-header-inner">
+                <div class="header-logo">
+                    <a href="index.html">
+                        <img alt="BNFWA" height="55" width="219" src="assets/images/logo-home.svg"/>
+                    </a>
+                </div>
+                <div class="header-notices">
+                    <p>
+                        <span class="lang-en"> RECRUITING NOW</span>
+                        <span class="lang-bn"> নিয়োগ চলছে </span>
+                        <a href="https://joinnavy.navy.mil.bd/" target="_blank">
+                            <span class="lang-en">EXPLORE NAVY CAREERS</span>
+                            <span class="lang-bn">নৌবাহিনীর নিয়োগ দেখুন  </span>
+                        </a>
+                    </p>
+                </div>
+                <div class="floating-menu-trigger">
+                    <button>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="inner-page-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1><span class="lang-en">Products</span> <span class="lang-bn">Products</span></h1>
+            </div>
+        </div>
+    </div>
+</section>
+<main>
+    <section class="page-section">
+        <div class="container">
+            <div class="row row-gap-4 justify-content-center">
+                <div class="col">
+                    <div class="products-wrapper">
+
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="বিভিনড়ব ডিজাইনের জুট ব্যাগ"
+                                 src="assets/images/products/different-design-jute-bag.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5"> বিভিন্ন ডিজাইনের জুট ব্যাগ</h3>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="বেসিন তাওয়াল" src="assets/images/products/basin-towel.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">বেসিন তাওয়াল</h3>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="হাত পার্স" src="assets/images/products/hand-purse.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">হাত পার্স</h3>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="কসমেটিক কীট ব্যাগ" src="assets/images/products/cosmetic-kit-bag.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">কসমেটিক কীট ব্যাগ</h3>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="ব্যাগ হোল্ডার" src="assets/images/products/bag-holder.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">ব্যাগ হোল্ডার</h3>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="স্যু হোল্ডার" src="assets/images/products/shoe-holder.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">স্যু হোল্ডার</h3>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="নামাজের হিজাব" src="assets/images/products/prayer-hijab.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">নামাজের হিজাব</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="বেবি হিজাব" src="assets/images/products/baby-hijab.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">বেবি হিজাব</h3>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="কিচেন এপ্রোন" src="assets/images/products/kitchen-apron.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">কিচেন এপ্রোন</h3>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="বাটার ফ্লাই ব্যাগ" src="assets/images/products/butterfly-bag.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">বাটার ফ্লাই ব্যাগ</h3>
+                                </div>
+                            </div>
+                        </a>
+
+
+                        <!-- 1. বেডশীট ডিজাইন -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="বেডশীট ডিজাইন" src="assets/images/products/1.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">বেডশীট ডিজাইন</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 2. বেডশীট এপ্লিক -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="বেডশীট এপ্লিক" src="assets/images/products/2.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">বেডশীট এপ্লিক</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 3. বেডশীট এম্ব্রয়ডারী -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="বেডশীট এম্ব্রয়ডারী" src="assets/images/products/3.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">বেডশীট এম্ব্রয়ডারী</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 4. বেডশীট ব্লক প্রিন্ট নরমাল -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="বেডশীট ব্লক প্রিন্ট নরমাল" src="assets/images/products/4.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">বেডশীট ব্লক প্রিন্ট নরমাল</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 5. বেডশীট ব্লক প্রিন্ট শততালী -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="বেডশীট ব্লক প্রিন্ট শততালী" src="assets/images/products/5.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">বেডশীট ব্লক প্রিন্ট শততালী</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 6. চেয়ার কভার সেট -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="চেয়ার কভার সেট" src="assets/images/products/6.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">চেয়ার কভার সেট</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 7. টেবিল ম্যাট রানার সেট (ব্লক প্রিন্ট) -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="টেবিল ম্যাট রানার সেট (ব্লক প্রিন্ট)" src="assets/images/products/7.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">টেবিল ম্যাট রানার সেট (ব্লক প্রিন্ট)</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 8. টেবিল ম্যাট রানার সেট (এম্ব্রয়ডারী) -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="টেবিল ম্যাট রানার সেট (এম্ব্রয়ডারী)" src="assets/images/products/8.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">টেবিল ম্যাট রানার সেট (এম্ব্রয়ডারী)</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 9. টেবিল ম্যাট রানার সেট (সোফার কাঁপড়) -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="টেবিল ম্যাট রানার সেট (সোফার কাঁপড়)" src="assets/images/products/9.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">টেবিল ম্যাট রানার সেট (সোফার কাঁপড়)</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 10. লং রানার (ব্লক প্রিন্ট ) -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="লং রানার (ব্লক প্রিন্ট )" src="assets/images/products/10.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">লং রানার (ব্লক প্রিন্ট )</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 11. কুষন কভার (এম্ব্রয়ডারী) -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="কুষন কভার (এম্ব্রয়ডারী)" src="assets/images/products/11.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">কুষন কভার (এম্ব্রয়ডারী)</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 12. ব্লক প্রিন্ট ফ্রক/কটি/ছেলে বাচ্চাদের পাঞ্জাবীর সাথে পড়ার জন্য) -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="ব্লক প্রিন্ট ফ্রক/কটি/ছেলে বাচ্চাদের পাঞ্জাবীর সাথে পড়ার জন্য"
+                                 src="assets/images/products/12.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">ব্লক প্রিন্ট ফ্রক/কটি/ছেলে বাচ্চাদের পাঞ্জাবীর সাথে পড়ার জন্য</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 13. খিমার -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="খিমার" src="assets/images/products/13.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">খিমার</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 14. লেডিস স্ট্রেইট প্যান্ট , টিউলিপ প্যান্ট, আফগানি প্যান্ট, বেলবটম প্যান্ট -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="লেডিস স্ট্রেইট প্যান্ট , টিউলিপ প্যান্ট, আফগানি প্যান্ট, বেলবটম প্যান্ট"
+                                 src="assets/images/products/14.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">লেডিস স্ট্রেইট প্যান্ট , টিউলিপ প্যান্ট, আফগানি প্যান্ট, বেলবটম
+                                        প্যান্ট</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 15. সুতি/লিনেন/ভয়েল/ কাপড়ের লেডিজ কো অর্ডস সেট -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="সুতি/লিনেন/ভয়েল/ কাপড়ের লেডিজ কো অর্ডস সেট" src="assets/images/products/15.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">সুতি/লিনেন/ভয়েল/ কাপড়ের লেডিজ কো অর্ডস সেট</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 16. বাচ্চাদের ফ্রক, ফতুয়া -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="বাচ্চাদের ফ্রক, ফতুয়া" src="assets/images/products/16.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">বাচ্চাদের ফ্রক, ফতুয়া</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 17. আরামদায়ক মেক্সি -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="আরামদায়ক মেক্সি" src="assets/images/products/17.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">আরামদায়ক মেক্সি</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 18. নামাজের হিজাব -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="নামাজের হিজাব" src="assets/images/products/18.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">নামাজের হিজাব</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 19. ব্লক প্রিন্ট থ্রি পিছ -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="ব্লক প্রিন্ট থ্রি পিছ" src="assets/images/products/19.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">ব্লক প্রিন্ট থ্রি পিছ</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 20. শিতের কাপড় -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="শিতের কাপড়" src="assets/images/products/20.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">শিতের কাপড়</h3>
+                                </div>
+                            </div>
+                        </a>
+
+                        <!-- 21. আবায়া -->
+                        <a class="product-item" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">
+                            <img alt="আবায়া" src="assets/images/products/21.jpg">
+                            <div>
+                                <div>
+                                    <h3 class="h5">আবায়া</h3>
+                                </div>
+                            </div>
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <!-- Modal -->
+                    <div class="modal fade product-inquiry-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Product Inquiry</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body p-4">
+                                    <div id="modal-product-content"></div>
+                                    <form class="" action="sendEmail.php">
+                                        <input type="hidden" name="product_name" id="product_name">
+                                        <div class="form-group mb-3">
+                                            <label for="">Your Name</label>
+                                            <input name="name" type="text" class="form-control" required>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="form-group mb-3">
+                                                    <label for="">Your Email</label>
+                                                    <input name="email" type="text" class="form-control" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group mb-3">
+                                                    <label for="">Your Phone</label>
+                                                    <input name="phone" type="text" class="form-control" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label for="">Message</label>
+                                            <textarea name="message" class="form-control" cols="4" rows="4"></textarea>
+                                        </div>
+                                        <div class="form-group mb-3">
+
+                                            <button type="submit" class="btn btn-primary w-100">Send</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="main-footer">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-md-4 col-lg-3">
+                    <div class="footer-widget">
+                        <div class="logo-blink">
+                            <a href="https://joinnavy.navy.mil.bd/" target="_blank">
+                                <img alt="BNFWA" height="55" width="219" src="assets/images/logo-footer.svg"/>
+                            </a>
+                        </div>
+                        <h3 class="h6 mt-4">Follow us </h3>
+                        <div>
+                            <ul class="social-media">
+                                <li><a href="https://www.facebook.com/bangladeshnavy.mil.bd" target="_blank"><i
+                                        class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
+                                <li><a href="https://www.youtube.com/@bangladeshnavy4191" target="_blank"><i
+                                        class="fab fa-youtube"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="footer-widget">
+                        <h3 class="widget-title">Contact</h3>
+                        <div class="widget-address">
+                            <ul>
+                                <li><a href=""><i class="fas fa-location-pin"></i> BNFWA Central Office <br>
+                                    Naval Headquarters,<br>
+                                    Banani, Dhaka-1213
+                                </a></li>
+                                <li>
+                                    <i class="fas fa-phone-alt"></i> Treasurer <a href=""> +88 01769-702716</a>
+                                </li>
+                                <li>
+                                    <a href=""><i class="fas fa-envelope"></i> bnfwa@navy.mil.bd</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="footer-widget">
+                        <h3 class="widget-title">About Us</h3>
+                        <div class="widget-menu">
+                            <ul>
+                                <li><i class="fa fa-chevron-right"></i> <a href="history.html">History of BNFWA</a></li>
+                                <li><i class="fa fa-chevron-right"></i> <a href="chief-message.html">Chief Patron's
+                                    Message</a></li>
+                                <li><i class="fa fa-chevron-right"></i> <a href="president.html">President's
+                                    statement</a></li>
+                                <li><i class="fa fa-chevron-right"></i> <a href="vision-mission.html">Vision and
+                                    Mission</a></li>
+                                <li><i class="fa fa-chevron-right"></i> <a href="former-president.html">Former
+                                    President</a></li>
+                                <li><i class="fa fa-chevron-right"></i> <a href="organization.html">Organization</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer-widget">
+                        <h3 class="widget-title">What We Do</h3>
+                        <div class="widget-menu">
+                            <ul>
+                                <li><i class="fa fa-chevron-right"></i> <a href="role-of-bnfwa.html">Role of BNFWA</a>
+                                </li>
+                                <li><i class="fa fa-chevron-right"></i> <a href="ladies-club.html">BN Ladies Club</a>
+                                </li>
+                                <li><i class="fa fa-chevron-right"></i> <a href="shishu-niketon.html">Nou Paribar Shishu
+                                    Niketon School</a></li>
+                                <li><i class="fa fa-chevron-right"></i> <a href="ashar-alo.html">Ashar Alo School</a>
+                                </li>
+                                <li><i class="fa fa-chevron-right"></i> <a href="day-care-centre.html">Day Care
+                                    Centre</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col">&copy; Copyright Bangladesh Navy</div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Swiper JS -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/animate.min.js"></script>
+<script src="assets/js/custom-script.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.former-cns-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.former-cns-card {
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  border: 1px solid $dark-color-10;
+
+  h4 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+    color: $dark-color-60;
+  }
+
+  & > div {
+    &:first-child {
+      img {
+        width: 100%;
+      }
+    }
+
+    &:last-child {
+      padding-top: 10px;
+    }
+  }
+}

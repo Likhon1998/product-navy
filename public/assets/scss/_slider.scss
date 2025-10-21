@@ -1,0 +1,91 @@
+.homepage-main-slider {
+  background: #00163b;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  .swiper-slide-content {
+    display: none;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    background-color: $primary-color-100;
+    color: white;
+    width: 40px;
+    height: 80px;
+    transition: 0.2s;
+  }
+
+  .swiper-button-next {
+    transform: translateX(50px);
+  }
+
+  .swiper-button-prev {
+    transform: translateX(-50px);
+  }
+
+  &:hover {
+    .swiper-button-next {
+      transform: translateX(0px);
+    }
+
+    .swiper-button-prev {
+      transform: translateX(0px);
+    }
+
+  }
+
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      border-radius: 0;
+      background-color: #fff;
+    }
+  }
+}
+
+.mySwiper {
+  padding-top: 50px;
+}
+
+.flash-news-section {
+  padding: 15px 30px;
+  background: #17345D;
+  color: #FFEC00;
+  font-size: 18px;
+}
+
+.flash-news-wrapper {
+  width: 100%;
+  overflow: hidden;
+  //padding: 10px 30px;
+  //background-color: $primary-color-100;
+
+}
+
+.swiper-wrapper {
+  width: 100%;
+  display: flex;
+  //gap: 10px;
+}
+
+.flash-news-wrapper .swiper-slide {
+  flex-shrink: 0;
+  width: auto;
+}
+
+
+.flash-news-wrapper .swiper-slide a {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.flash-news-wrapper .swiper-wrapper {
+  transition-timing-function: linear;
+}

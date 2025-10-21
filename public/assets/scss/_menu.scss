@@ -1,0 +1,252 @@
+.floating-menu-wrapper {
+  background-color: rgba(0, 0, 0, 0.54);
+  position: fixed;
+  right: -100%;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+  transition: 0.2s;
+  justify-content: flex-end;
+  backdrop-filter: blur(5px);
+
+  .floating-menu-inner {
+    background-color: $primary-color-80;
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    padding: 60px 30px 30px;
+    overflow-y: auto;
+    position: relative;
+    color: #fff;
+
+    .close-floating-menu {
+      background-color: #5b77a545;
+      border: 1px solid #51627c;
+      color: #ffffff;
+      border-radius: 40px;
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+      transition: 0.2s;
+      z-index: 9;
+
+      &:hover {
+        background-color: #fff;
+        color: $primary-color-100;
+      }
+    }
+  }
+}
+
+.menu-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.menu-level {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  padding-left: 20px;
+
+  &#level-1 {
+    padding-left: 0;
+  }
+}
+
+.menu-item {
+  cursor: pointer;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+
+  &[data-level="1"] {
+    padding: 12px 0;
+    border-top: 1px solid #272a2b;
+    border-bottom: 1px solid #415e74;
+    font-family: 'Bebas Neue', sans-serif;
+    //font-family: "Yanone Kaffeesatz", serif;
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:first-child {
+      border-top: none;
+    }
+
+  }
+
+  i {
+    font-size: 12px;
+  }
+
+  &:hover {
+    color: #FFA617;
+  }
+}
+
+
+.back-button {
+  margin-bottom: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: table;
+  vertical-align: middle;
+  font-family: 'Bebas Neue', sans-serif;
+  //font-family: "Yanone Kaffeesatz", serif;
+  font-weight: 500;
+  font-size: 19px;
+  letter-spacing: 2px;
+
+  border-bottom: 1px solid #415e74;
+  width: 100%;
+  position: relative;
+  margin-left: -20px;
+  padding: 8px 0;
+
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #272a2b;
+    position: absolute;
+    bottom: -2px;
+  }
+
+  i {
+    font-size: 12px;
+    margin-right: 4px;
+
+  }
+
+}
+
+.visible-label {
+  transform: none;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.hidden-label {
+  transform: translateX(100%);
+}
+
+.outgoing-label {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+
+.floating-menu-activated {
+  .mobile-menu-trigger {
+    button {
+      & > span {
+        background-color: transparent !important;
+
+        &:before, &:after {
+          // transform: scale(0.6, 1);
+        }
+
+        &:before {
+          top: 0 !important;
+          transform: rotate(45deg) scale(0.6, 1);
+        }
+
+        &:after {
+          top: 0 !important;
+          transform: rotate(-45deg) scale(0.6, 1);
+        }
+      }
+    }
+  }
+
+  .floating-menu-wrapper {
+    right: 0;
+    display: flex;
+  }
+}
+
+
+.floating-menu-trigger {
+  margin-left: auto;
+
+  button {
+    display: flex;
+    align-items: center;
+    //width: 30px;
+    height: 48px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    outline: none;
+
+    & > span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: #757575;
+      border-radius: 3px;
+      position: relative;
+
+      &:before, &:after {
+        display: block;
+        content: "";
+        width: 30px;
+        height: 2.5px;
+        background: #757575;
+        position: absolute;
+        border-radius: 3px;
+        transition: 0.2s;
+      }
+
+      &:before {
+        top: -10px;
+      }
+
+      &:after {
+        top: 10px;
+      }
+    }
+
+    &:hover {
+      //span {
+      //  background-color: transparent !important;
+      //
+      //  &:before {
+      //    top: 0 !important;
+      //    transform: rotate(45deg) scale(0.6, 1);
+      //  }
+      //
+      //  &:after {
+      //    top: 0 !important;
+      //    transform: rotate(-45deg) scale(0.6, 1);
+      //  }
+      //}
+    }
+  }
+}

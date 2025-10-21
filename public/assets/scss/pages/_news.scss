@@ -1,0 +1,130 @@
+
+.news-category-horizontal-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 8px 16px;
+      background-color: #fff;
+      color: inherit;
+      border-radius: 4px;
+      border: 1px solid $dark-color-10;
+    }
+
+    &.current-category-item {
+      a {
+        background-color: $primary-color-100;
+        color: $primary-color-10;
+      }
+    }
+
+    &:last-child {
+
+    }
+  }
+}
+
+.news-category-vertical-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 8px 16px;
+      background-color: #fff;
+      color: inherit;
+      border-bottom: 1px solid $dark-color-10;
+    }
+
+    &.current-category-item {
+      a {
+        color: $primary-color-100;
+      }
+    }
+
+    &:last-child {
+      a {
+        border-bottom: none;
+      }
+
+    }
+  }
+}
+
+.news-card {
+  padding: 15px;
+  border-radius: 4px;
+  background: #ffffff;
+
+  &-thumb {
+    margin-bottom: 15px;
+  }
+
+  &-info {
+    h3 {
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+
+      li {
+        list-style: none;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 20px;
+          height: 20px;
+          background: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.2703 9.65312L15.7031 4.30703C15.5896 4.1358 15.4354 3.99533 15.2544 3.89814C15.0734 3.80094 14.8711 3.75005 14.6656 3.75H3.125C2.79348 3.75 2.47554 3.8817 2.24112 4.11612C2.0067 4.35054 1.875 4.66848 1.875 5V15C1.875 15.3315 2.0067 15.6495 2.24112 15.8839C2.47554 16.1183 2.79348 16.25 3.125 16.25H14.6656C14.8709 16.2496 15.073 16.1987 15.254 16.1017C15.4349 16.0046 15.5892 15.8645 15.7031 15.6938L19.268 10.3469C19.3368 10.2444 19.3738 10.1238 19.3742 10.0004C19.3747 9.87689 19.3385 9.75606 19.2703 9.65312ZM14.6656 15H3.125V5H14.6656L17.9984 10L14.6656 15Z" fill="%23657595"/></svg>');
+
+        }
+
+        &:last-child {
+          &:before {
+            background: url('data:image/svg+xml,<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6048 12.3952L12.3952 11.6048L9.56246 8.77193V5.24998H8.4375V9.22787L11.6048 12.3952ZM9.00124 16.125C8.01579 16.125 7.08951 15.938 6.22241 15.564C5.3553 15.19 4.60104 14.6824 3.95963 14.0413C3.3182 13.4001 2.81041 12.6462 2.43624 11.7795C2.06208 10.9128 1.875 9.98669 1.875 9.00124C1.875 8.01579 2.062 7.08951 2.436 6.22241C2.81 5.3553 3.31756 4.60104 3.95869 3.95963C4.59983 3.3182 5.35376 2.81041 6.22048 2.43624C7.08719 2.06208 8.01328 1.875 8.99873 1.875C9.98418 1.875 10.9105 2.062 11.7776 2.436C12.6447 2.81 13.3989 3.31756 14.0403 3.95869C14.6818 4.59983 15.1896 5.35376 15.5637 6.22048C15.9379 7.08719 16.125 8.01328 16.125 8.99873C16.125 9.98418 15.938 10.9105 15.564 11.7776C15.19 12.6447 14.6824 13.3989 14.0413 14.0403C13.4001 14.6818 12.6462 15.1896 11.7795 15.5637C10.9128 15.9379 9.98669 16.125 9.00124 16.125ZM8.99998 15C10.6625 15 12.0781 14.4156 13.2469 13.2469C14.4156 12.0781 15 10.6625 15 8.99998C15 7.33748 14.4156 5.92186 13.2469 4.75311C12.0781 3.58436 10.6625 2.99998 8.99998 2.99998C7.33748 2.99998 5.92186 3.58436 4.75311 4.75311C3.58436 5.92186 2.99998 7.33748 2.99998 8.99998C2.99998 10.6625 3.58436 12.0781 4.75311 13.2469C5.92186 14.4156 7.33748 15 8.99998 15Z" fill="%23657595"/></svg>');
+          }
+        }
+      }
+    }
+  }
+}
+
+.widget {
+  background-color: #fff;
+  padding: 16px;
+  margin-bottom: 20px;
+
+  & > &-title {
+    font-size: 24px;
+    border-bottom: 1.5px solid $primary-color-30;
+    padding-bottom: 6px;
+  }
+}

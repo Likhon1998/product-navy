@@ -1,0 +1,55 @@
+//@import "pages/former-cns";
+@import "pages/news";
+@import "pages/publication";
+@import "pages/gallery";
+@import "pages/combatants";
+@import "pages/contact";
+
+.bn-branch-card-wrapper,
+.bn-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.bn-branch-card, .bn-number-card {
+  position: relative;
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid $dark-color-10;
+
+  h2, h3 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+  }
+
+  .number {
+    font-size: 1.9rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e8f3;
+    border-radius: 4px;
+
+  }
+}
+
+.jhinuk-shop-section {
+  .card {
+    height: 100%;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.former-president-section {
+  .card {
+    p {
+
+    }
+  }
+}
