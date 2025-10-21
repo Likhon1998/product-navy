@@ -43,7 +43,7 @@
             </div>
 
             <div class="mb-3">
-                <label class="block text-gray-700 text-xs sm:text-sm font-medium mb-1">Price (৳)</label>
+                <label class="block text-gray-700 text-xs sm:text-sm font-medium mb-1">Price</label>
                 <input type="number" name="price" value="{{ old('price', $product->price) }}" step="0.01" 
                        class="w-full border border-gray-300 p-2 rounded text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-gray-400">
             </div>
