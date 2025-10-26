@@ -2,15 +2,31 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class secondpageController extends Controller
 {
+    public function newsDetails()
+    {
+        return view('secondpages.news-details');
+    }
+    public function notice()
+    {
+        return view('secondpages.notice');
+    }
 
+
+    public function notifications()
+    {
+        return view('secondpages.notifications');
+    }
 
     // Method for organisation page
     public function organisation()
+
     {
+
         return view('secondpages.organisation');
     }
 
@@ -34,8 +50,11 @@ class secondpageController extends Controller
 
     // Method for products page
     public function products()
+
     {
-        return view('secondpages.products');
+        $products = Product::all();
+
+        return view('secondpages.products', compact('products'));
     }
 
     // Method for publications page
@@ -50,11 +69,7 @@ class secondpageController extends Controller
         return view('secondpages.role-of-bnfwa');
     }
 
-    // Method for sendEmail page
-    public function sendEmail()
-    {
-        return view('secondpages.sendEmail');
-    }
+
 
     // Method for shishu-niketon page
     public function shishuNiketon()
@@ -67,5 +82,4 @@ class secondpageController extends Controller
     {
         return view('secondpages.vision-mission');
     }
-
 }

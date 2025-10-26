@@ -19,6 +19,9 @@ Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
 Route::get('/', [ProductController::class, 'index'])->name('home');
 
 //second page routes
+Route::get('/news-details', [SecondPageController::class, 'newsDetails']);
+Route::get('/notice', [SecondPageController::class, 'notice']);
+Route::get('/notifications', [SecondPageController::class, 'notifications']);
 Route::get('/organisation', [SecondPageController::class, 'organisation']);
 Route::get('/organization', [SecondPageController::class, 'organization']);
 Route::get('/president', [SecondPageController::class, 'president']);

@@ -1,6 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title', 'BN Organisation')
+@section('title', 'Vision and Mission of Bangladesh Navy')
 
 @section('content')
 
@@ -58,7 +58,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>BN Organisation</h1>
+                    <h1><span class="lang-en">Mission and Vision</span><span class="lang-bn">মিশন এবং ভিশন</span></h1>
                 </div>
             </div>
         </div>
@@ -67,25 +67,55 @@
     <main>
         <section class="page-section">
             <div class="container">
-                <div class="row row-gap-3 my-4 justify-content-center">
-                    <div class="col-md-12">
-                        <img alt="Organization Image" src="{{ asset('assets/images/pages/bn-organisation/bn-organization.jpg') }}">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img alt="Mission and Vision" src="{{ asset('assets/images/mission-vission.png') }}">
                     </div>
-                </div>
-                <div class="row row-gap-3 my-4">
-                    @foreach(['COMCHIT', 'COMBAN', 'COMKHUL', 'COMDHAKA', 'CSD', 'COMFLOTWEST', 'COMSWADS', 'COMSUB', 'COMNAV', 'CHIEF HYDROGRAPHER', 'NATDOC'] as $item)
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <a href="{{ url('admin-autho-' . strtolower(str_replace(' ', '-', $item)) . '.html') }}">
-                                        <img alt="{{ $item }}" class="mb-3" src="{{ asset('assets/images/pages/admin-authorities/' . strtolower(str_replace(' ', '-', $item)) . '.png') }}">
-                                        <h5 class="text-center">{{ $item }}</h5>
-                                    </a>
-                                </div>
+                    <div class="col-md-6">
+                        <div class="px-4">
+                            <h3><span class="lang-en">Mission</span><span class="lang-bn">মিশন</span></h3>
+                            <div class="lang-en">
+                                <p>
+                                    Bangladesh Navy Family Welfare Association women reinforce its commitment towards
+                                    empowerment, gender neutrality and welfare with a REDEFINED VISION. Bonding upon our
+                                    pioneers' legacy that changing times bring with them changing roles and needs.
+                                </p>
+                            </div>
+                            <div class="lang-bn">
+                                <p>
+                                    বাংলাদেশ নৌবাহিনী পরিবার কল্যাণ সংঘ নারী ক্ষমতায়ন, লিঙ্গ নিরপেক্ষতা এবং কল্যাণের প্রতি
+                                    তার প্রতিশ্রুতিকে একটি পুনঃসংজ্ঞায়িত দৃষ্টিভঙ্গি দিয়ে শক্তিশালী করে। আমাদের অগ্রগামীদের
+                                    উত্তরাধিকারের সাথে বন্ধন যা পরিবর্তিতত সময় তাদের সাথে পরিতর্বনশীল ভুমিকা এবং প্রয়োজন
+                                    নিয়ে আসে।
+                                </p>
                             </div>
                         </div>
-                    @endforeach
+                    </div>
                 </div>
+
+                <div class="row flex-md-row-reverse align-items-center">
+                    <div class="col-md-6">
+                        <img alt="Mission and Vision" src="{{ asset('assets/images/mission-vission.png') }}">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="pe-4">
+                            <h3><span class="lang-en">Vision</span><span class="lang-bn">ভিশন</span></h3>
+                            <div class="lang-en">
+                                <p>
+                                    In a unique initiative to empower and to make the navy wife self-reliant, focusing on
+                                    naval community bonding, welfare and environmental protection.
+                                </p>
+                            </div>
+                            <div class="lang-bn">
+                                <p>
+                                    নৌবাহিনীর সদস্যদের পারিবারিক বন্ধন, কল্যাণ এবং পরিবেশ সুরক্ষায় নৌসদস্যদের স্ত্রীদের
+                                    ক্ষমতায়ন ও স্বনির্ভর করতে একটি অনন্য উদ্যোগ।
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -101,7 +131,7 @@
                                     <img alt="BNFWA" height="55" width="219" src="{{ asset('assets/images/logo-footer.svg') }}"/>
                                 </a>
                             </div>
-                            <h3 class="h6 mt-4">Follow us</h3>
+                            <h3 class="h6 mt-4">Follow us </h3>
                             <div>
                                 <ul class="social-media">
                                     <li><a href="https://www.facebook.com/bangladeshnavy.mil.bd" target="_blank"><i class="fab fa-facebook-f"></i></a></li>

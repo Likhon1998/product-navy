@@ -1,6 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title', 'BN Organisation')
+@section('title', 'Notifications')
 
 @section('content')
 
@@ -58,7 +58,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>BN Organisation</h1>
+                    <h1><span class="lang-en">Notifications</span><span class="lang-bn">নোটিফিকেশন</span></h1>
                 </div>
             </div>
         </div>
@@ -67,24 +67,11 @@
     <main>
         <section class="page-section">
             <div class="container">
-                <div class="row row-gap-3 my-4 justify-content-center">
-                    <div class="col-md-12">
-                        <img alt="Organization Image" src="{{ asset('assets/images/pages/bn-organisation/bn-organization.jpg') }}">
-                    </div>
-                </div>
                 <div class="row row-gap-3 my-4">
-                    @foreach(['COMCHIT', 'COMBAN', 'COMKHUL', 'COMDHAKA', 'CSD', 'COMFLOTWEST', 'COMSWADS', 'COMSUB', 'COMNAV', 'CHIEF HYDROGRAPHER', 'NATDOC'] as $item)
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <a href="{{ url('admin-autho-' . strtolower(str_replace(' ', '-', $item)) . '.html') }}">
-                                        <img alt="{{ $item }}" class="mb-3" src="{{ asset('assets/images/pages/admin-authorities/' . strtolower(str_replace(' ', '-', $item)) . '.png') }}">
-                                        <h5 class="text-center">{{ $item }}</h5>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
+                    <div class="col-md-12">
+                        <!-- Notifications content goes here -->
+                        <p>Notification content will be displayed here.</p>
+                    </div>
                 </div>
             </div>
         </section>

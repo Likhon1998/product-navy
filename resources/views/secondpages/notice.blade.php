@@ -1,6 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title', 'BN Organisation')
+@section('title', 'Notice')
 
 @section('content')
 
@@ -58,7 +58,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1>BN Organisation</h1>
+                    <h1><span class="lang-en">Notice</span><span class="lang-bn">নোটিফিকেশন</span></h1>
                 </div>
             </div>
         </div>
@@ -67,24 +67,12 @@
     <main>
         <section class="page-section">
             <div class="container">
-                <div class="row row-gap-3 my-4 justify-content-center">
-                    <div class="col-md-12">
-                        <img alt="Organization Image" src="{{ asset('assets/images/pages/bn-organisation/bn-organization.jpg') }}">
-                    </div>
-                </div>
-                <div class="row row-gap-3 my-4">
-                    @foreach(['COMCHIT', 'COMBAN', 'COMKHUL', 'COMDHAKA', 'CSD', 'COMFLOTWEST', 'COMSWADS', 'COMSUB', 'COMNAV', 'CHIEF HYDROGRAPHER', 'NATDOC'] as $item)
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <a href="{{ url('admin-autho-' . strtolower(str_replace(' ', '-', $item)) . '.html') }}">
-                                        <img alt="{{ $item }}" class="mb-3" src="{{ asset('assets/images/pages/admin-authorities/' . strtolower(str_replace(' ', '-', $item)) . '.png') }}">
-                                        <h5 class="text-center">{{ $item }}</h5>
-                                    </a>
-                                </div>
-                            </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="alert alert-warning">
+                            There is no content to show. Please visit again later for updated notice.
                         </div>
-                    @endforeach
+                    </div>
                 </div>
             </div>
         </section>
@@ -170,5 +158,4 @@
         </div>
     </div>
 </footer>
-
 @endsection
