@@ -6,7 +6,18 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\secondpageController;
 
 Route::get('/', [ProductController::class, 'index'])->name('home');
-Route::get('/second-page', [secondpageController::class, 'contact'])->name('second.page');
+
+//second page routes
+Route::get('/organisation', [SecondPageController::class, 'organisation']);
+Route::get('/organization', [SecondPageController::class, 'organization']);
+Route::get('/president', [SecondPageController::class, 'president']);
+Route::get('/product-form', [SecondPageController::class, 'productForm']);
+Route::get('/products', [SecondPageController::class, 'products']);
+Route::get('/publications', [SecondPageController::class, 'publications']);
+Route::get('/role-of-bnfwa', [SecondPageController::class, 'roleOfBnfwa']);
+Route::get('/sendEmail', [SecondPageController::class, 'sendEmail']);
+Route::get('/shishu-niketon', [SecondPageController::class, 'shishuNiketon']);
+Route::get('/vision-mission', [SecondPageController::class, 'visionMission']);
 
 // Admin panel routes (only for authenticated users)
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
