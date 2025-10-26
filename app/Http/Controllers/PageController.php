@@ -16,4 +16,9 @@ class PageController extends Controller
     {
         return view('pages.ashar-alo');
     }
+
+    public function chiefMessage()
+    {
+        return view('pages.chief-message');
+    }
 }
