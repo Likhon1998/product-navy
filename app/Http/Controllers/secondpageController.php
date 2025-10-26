@@ -50,10 +50,8 @@ class secondpageController extends Controller
 
     // Method for products page
     public function products()
-
     {
-        $products = Product::all();
-
+        $products = Product::latest()->get(); 
         return view('secondpages.products', compact('products'));
     }
 

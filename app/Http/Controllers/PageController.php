@@ -8,8 +8,7 @@ class PageController extends Controller
 {
     public function home()
     {
-        $products = Product::latest()->get();
-        return view('welcome', compact('products'));
+        return view('pages.index');
     }
 
      public function asharAlo()
@@ -60,11 +59,6 @@ class PageController extends Controller
     public function history()
     {
         return view('pages.history');
-    }   
-
-    public function index()
-    {
-        return view('pages.index');
     }
 
     public function je_tc()

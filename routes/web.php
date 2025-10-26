@@ -28,8 +28,7 @@ Route::get('/news', [PageController::class, 'news'])->name('news');
 
 
 
-Route::get('/', [ProductController::class, 'index'])->name('home');
-
+Route::get('/', [PageController::class, 'home'])->name('home');
 //second page routes
 Route::get('/news-details', [SecondPageController::class, 'newsDetails']);
 Route::get('/notice', [SecondPageController::class, 'notice']);
@@ -45,13 +44,10 @@ Route::get('/sendEmail', [SecondPageController::class, 'sendEmail']);
 Route::get('/shishu-niketon', [SecondPageController::class, 'shishuNiketon']);
 Route::get('/vision-mission', [SecondPageController::class, 'visionMission']);
 
-// Admin panel routes (only for authenticated users)
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
-    // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-    // Product CRUD
     Route::resource('products', ProductController::class)->except(['show']);
 });
+Route::post('/product-inquiry', [ProductController::class, 'inquiry'])->name('product.inquiry');
 
 require __DIR__.'/auth.php';

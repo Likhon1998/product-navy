@@ -3,157 +3,59 @@
 @section('title', 'Role Of BNFWA')
 
 @section('content')
-    <div class="preloader-wrapper">
-        <div class="preloader"></div>
-    </div>
 
-    <div class="floating-menu-wrapper">
-        <div class="floating-menu-inner">
-            <button class="close-floating-menu">
-                <i class="fas fa-close"></i>
-            </button>
-            <div class="menu-container" id="menu-container">
-                <!-- Menu levels will be dynamically injected here -->
+<section class="inner-page-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>
+                    <span class="lang-en">Role Of BNFWA</span>
+                    <span class="lang-bn">বাংলাদেশ নৌবাহিনী পরিবার কল্যাণ সংঘের ভূমিকা</span>
+                </h1>
             </div>
         </div>
     </div>
+</section>
 
-    <header class="site-header">
-        <div class="main-header">
-            <div class="container-xl">
-                <div class="row">
-                    <div class="col">
-                        <div class="localization-trigger">
-                            <button class="lang-btn-en" onclick="toggleLanguage('en')">En</button>
-                            <button class="lang-btn-bn" onclick="toggleLanguage('bn')">Bn</button>
+<main>
+    <section class="page-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-body p-5">
+
+                            <div class="lang-en">
+                                <p>
+                                    The Bangladesh Navy Family Welfare Association (BNFWA) is responsible for
+                                    the welfare of naval families. Its activities include organizing educational,
+                                    healthcare, and recreational programs for the benefit of naval personnel and
+                                    their families.
+                                </p>
+                                <p>
+                                    BNFWA also manages schools like Ashar Alo School and Nou Paribar Shishu Niketon,
+                                    as well as day care centers to support working parents and children in need.
+                                </p>
+                            </div>
+
+                            <div class="lang-bn">
+                                <p>
+                                    বাংলাদেশ নৌবাহিনী পরিবার কল্যাণ সংঘ (BNFWA) নৌবাহিনী পরিবারের কল্যাণের জন্য
+                                    দায়িত্বশীল। এর কার্যক্রমে রয়েছে শিক্ষামূলক, স্বাস্থ্যসেবা এবং বিনোদনমূলক
+                                    কার্যক্রম পরিচালনা করা।
+                                </p>
+                                <p>
+                                    BNFWA আশার আলো স্কুল ও নৌ পরিবার শিশু নিকেতন স্কুলের মতো স্কুল এবং
+                                    ডে কেয়ার সেন্টার পরিচালনা করে, যা কর্মরত পিতামাতার এবং শিশুদের সহায়তা করে।
+                                </p>
+                            </div>
+
                         </div>
                     </div>
-                </div>
-                <div class="main-header-inner">
-                    <div class="header-logo">
-                        <a href="{{ url('/') }}">
-                            <img src="{{ asset('assets/images/logo-home.svg') }}" alt="BNFWA" width="219" height="55">
-                        </a>
-                    </div>
-                    <div class="header-notices">
-                        <p>
-                            <span class="lang-en">RECRUITING NOW</span>
-                            <span class="lang-bn">নিয়োগ চলছে</span>
-                            <a href="https://joinnavy.navy.mil.bd/" target="_blank">
-                                <span class="lang-en">EXPLORE NAVY CAREERS</span>
-                                <span class="lang-bn">নৌবাহিনীর নিয়োগ দেখুন</span>
-                            </a>
-                        </p>
-                    </div>
-                    <div class="floating-menu-trigger">
-                        <button><span></span></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <section class="inner-page-banner">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1>
-                        <span class="lang-en">Chief Patron's Message</span>
-                        <span class="lang-bn">প্রধান পৃষ্ঠপোষকের বাণী</span>
-                    </h1>
                 </div>
             </div>
         </div>
     </section>
+</main>
 
-    <main>
-        <section class="page-section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-10">
-                        <div class="card">
-                            <div class="card-body p-5">
-                                Under Construction
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="main-footer">
-            <div class="container-xl">
-                <div class="row">
-                    <div class="col-md-4 col-lg-3">
-                        <div class="footer-widget">
-                            <div class="logo-blink">
-                                <a href="https://joinnavy.navy.mil.bd/" target="_blank">
-                                    <img src="{{ asset('assets/images/logo-footer.svg') }}" alt="BNFWA" width="219" height="55">
-                                </a>
-                            </div>
-                            <h3 class="h6 mt-4">Follow us</h3>
-                            <ul class="social-media">
-                                <li><a href="https://www.facebook.com/bangladeshnavy.mil.bd" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
-                                <li><a href="https://www.youtube.com/@bangladeshnavy4191" target="_blank"><i class="fab fa-youtube"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-lg-3">
-                        <div class="footer-widget">
-                            <h3 class="widget-title">Contact</h3>
-                            <ul class="widget-address">
-                                <li>
-                                    <i class="fas fa-location-pin"></i> BNFWA Central Office<br>
-                                    Naval Headquarters,<br>
-                                    Banani, Dhaka-1213
-                                </li>
-                                <li><i class="fas fa-phone-alt"></i> Treasurer <a href="#">+88 01769-702716</a></li>
-                                <li><i class="fas fa-envelope"></i> <a href="mailto:bnfwa@navy.mil.bd">bnfwa@navy.mil.bd</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="footer-widget">
-                            <h3 class="widget-title">About Us</h3>
-                            <ul class="widget-menu">
-                                <li><i class="fa fa-chevron-right"></i> <a href="{{ url('history') }}">History of BNFWA</a></li>
-                                <li><i class="fa fa-chevron-right"></i> <a href="{{ url('chief-message') }}">Chief Patron's Message</a></li>
-                                <li><i class="fa fa-chevron-right"></i> <a href="{{ url('president') }}">President's Statement</a></li>
-                                <li><i class="fa fa-chevron-right"></i> <a href="{{ url('vision-mission') }}">Vision and Mission</a></li>
-                                <li><i class="fa fa-chevron-right"></i> <a href="{{ url('former-president') }}">Former President</a></li>
-                                <li><i class="fa fa-chevron-right"></i> <a href="{{ url('organization') }}">Organization</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3">
-                        <div class="footer-widget">
-                            <h3 class="widget-title">What We Do</h3>
-                            <ul class="widget-menu">
-                                <li><i class="fa fa-chevron-right"></i> <a href="{{ url('role-of-bnfwa') }}">Role of BNFWA</a></li>
-                                <li><i class="fa fa-chevron-right"></i> <a href="{{ url('ladies-club') }}">BN Ladies Club</a></li>
-                                <li><i class="fa fa-chevron-right"></i> <a href="{{ url('shishu-niketon') }}">Nou Paribar Shishu Niketon School</a></li>
-                                <li><i class="fa fa-chevron-right"></i> <a href="{{ url('ashar-alo') }}">Ashar Alo School</a></li>
-                                <li><i class="fa fa-chevron-right"></i> <a href="{{ url('day-care-centre') }}">Day Care Centre</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-copyright">
-            <div class="container-xl">
-                <div class="row">
-                    <div class="col">&copy; Copyright Bangladesh Navy</div>
-                </div>
-            </div>
-        </div>
-    </footer>
 @endsection

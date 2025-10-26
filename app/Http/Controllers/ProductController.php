@@ -70,4 +70,17 @@ class ProductController extends Controller
         $product->delete();
         return redirect()->back()->with('success', 'Product deleted successfully!');
     }
+
+    public function inquiry(Request $request)
+    {
+        $request->validate([
+            'product_id' => 'required|exists:products,id',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'required|string|max:20',
+            'message' => 'nullable|string',
+        ]);
+
+        return back()->with('success', 'Inquiry sent successfully!');
+    }
 }
