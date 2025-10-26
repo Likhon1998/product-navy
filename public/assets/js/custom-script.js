@@ -2,38 +2,38 @@ let menuData = {
     "menu": [
         {
             "label": "Home",
-            "url": "index.html",
+            "url": "/",
             "children": []
         },
         {
             "label": "About Us",
             "url": "#",
             "children": [
-                {"label": "History of BNFWA", "url": "history.html", "children": []},
-                {"label": "Chief Patron's Message", "url": "chief-message.html", "children": []},
-                {"label": "President's statement", "url": "president.html", "children": []},
-                {"label": "Vision and Mission", "url": "vision-mission.html", "children": []},
-                {"label": "Former President", "url": "former-president.html", "children": []},
-                {"label": "Organization", "url": "organization.html", "children": []},
+                {"label": "History of BNFWA", "url": "/history", "children": []},
+                {"label": "Chief Patron's Message", "url": "/chief-message", "children": []},
+                {"label": "President's statement", "url": "/president", "children": []},
+                {"label": "Vision and Mission", "url": "/vision-mission", "children": []},
+                {"label": "Former President", "url": "/former-president", "children": []},
+                {"label": "Organization", "url": "/organization", "children": []},
             ]
         },
         {
             "label": "What We Do",
             "url": "#",
             "children": [
-                {"label": "Role of BNFWA", "url": "role-of-bnfwa.html", "children": []},
-                {"label": "BN Ladies Club", "url": "ladies-club.html", "children": []},
-                {"label": "Nou Paribar Shishu Niketon School", "url": "shishu-niketon.html", "children": []},
-                {"label": "Ashar Alo School", "url": "ashar-alo.html", "children": []},
-                {"label": "Day Care Centre", "url": "day-care-centre.html", "children": []}
+                {"label": "Role of BNFWA", "url": "/role-of-bnfwa", "children": []},
+                {"label": "BN Ladies Club", "url": "/ladies-club", "children": []},
+                {"label": "Nou Paribar Shishu Niketon School", "url": "/shishu-niketon", "children": []},
+                {"label": "Ashar Alo School", "url": "/ashar-alo", "children": []},
+                {"label": "Day Care Centre", "url": "/day-care-centre", "children": []}
             ]
         },
         {
             "label": "BNFWA Initiative",
             "url": "#",
             "children": [
-                {"label": "Jhinuk Crafting & Training Center (JC & TC)", "url": "je-tc.html", "children": []},
-                {"label": "Day Care", "url": "day-care-centre.html", "children": []},
+                {"label": "Jhinuk Crafting & Training Center (JC & TC)", "url": "/je-tc", "children": []},
+                {"label": "Day Care", "url": "/day-care-centre", "children": []},
             ]
         },
         // {
@@ -47,23 +47,23 @@ let menuData = {
 
         {
             "label": "Jhinuk Products",
-            "url": "products.html",
+            "url": "/products",
             "children": []
         },
         {
             "label": "Publication & Media",
             "url": "#",
             "children": [
-                {"label": "News and Events", "url": "events.html", "children": []},
-                {"label": "Naval Publications", "url": "publications.html", "children": []},
-                {"label": "Naval Magazine", "url": "magazine.html", "children": []},
-                {"label": "Results & Circular", "url": "notice.html", "children": []},
-                {"label": "Photo Gallery", "url": "gallery.html", "children": []}
+                {"label": "News and Events", "url": "/events", "children": []},
+                {"label": "Naval Publications", "url": "/publications", "children": []},
+                {"label": "Naval Magazine", "url": "/magazine", "children": []},
+                {"label": "Results & Circular", "url": "/notice", "children": []},
+                {"label": "Photo Gallery", "url": "/gallery", "children": []}
             ]
         },
         {
             "label": "Contact Us",
-            "url": "#",
+            "url": "/contact",
             "children": []
         },
     ]
