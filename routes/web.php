@@ -10,6 +10,12 @@ use App\Http\Controllers\secondpageController;
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/ashar-alo', [PageController::class, 'asharAlo'])->name('ashar-alo');
 Route::get('/chief-message', [PageController::class, 'chiefMessage'])->name('chief-message');
+Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+Route::get('/day-care-centre', [PageController::class, 'dayCareCentre'])->name('day-care-centre');
+Route::get('/events', [PageController::class, 'events'])->name('events');
+Route::get('/former-president', [PageController::class, 'formerPresident'])->name('former-president');
+Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
+
 
 // Admin panel routes (only for authenticated users)
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {

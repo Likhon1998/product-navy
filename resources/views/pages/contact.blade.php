@@ -1,6 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title', 'Ashar Alo School')
+@section('title', 'Contact')
 
 @section('content')
 
@@ -14,7 +14,6 @@
             <i class="fas fa-close"></i>
         </button>
         <div class="menu-container" id="menu-container">
-            <!-- Dynamic menu will be injected here -->
         </div>
     </div>
 </div>
@@ -47,7 +46,9 @@
                     </p>
                 </div>
                 <div class="floating-menu-trigger">
-                    <button><span></span></button>
+                    <button>
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -58,10 +59,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>
-                    <span class="lang-en">Ashar Alo School</span>
-                    <span class="lang-bn">আশার আলো স্কুল</span>
-                </h1>
+                <h1>Contact</h1>
             </div>
         </div>
     </div>
@@ -71,43 +69,23 @@
     <section class="page-section">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="card">
-                        <div class="card-body p-5">
-                            <div class="lang-en">
-                                <p>
-                                    For the special and handicapped children, 'Ashar Alo' School is organized by BNFWA
-                                    in Chattogram and Khulna area.
-                                </p>
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="{{ asset('assets/images/ashar-alo (1).jpg') }}" class="img-fluid" alt="Ashar Alo School 1">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="{{ asset('assets/images/ashar-alo (2).jpg') }}" class="img-fluid" alt="Ashar Alo School 2">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="lang-bn">
-                                <p>
-                                    বিশেষ চাহিদা সম্পন্ন শিশুদের জন্য ঢাকা, চট্টগ্রাম ও খুলনা এলাকায় বাংলাদেশ নৌবাহিনী
-                                    পরিবার কল্যাণ সংঘ কর্তৃক আশার আলো স্কুল পরিচালিত হয়।
-                                </p>
-
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img src="{{ asset('assets/images/ashar-alo (1).jpg') }}" class="img-fluid" alt="আশার আলো স্কুল ১">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <img src="{{ asset('assets/images/ashar-alo (2).jpg') }}" class="img-fluid" alt="আশার আলো স্কুল ২">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="col-md-3">
+                    <h5>Email</h5>
+                    <p class="mb-0">bnfwa@navy.mil.bd</p>
+                    <p class="mb-0">bnfwanhq@gmail.com</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Mobile</h5>
+                    <p class="mb-0">01769-702716 (Treasurer)</p>
+                    <p class="mb-0">01769-702718 (Office Staff)</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Address</h5>
+                    <p>
+                        BNFWA Central Office <br>
+                        Naval Headquarters, <br>
+                        Banani, Dhaka-1213
+                    </p>
                 </div>
             </div>
         </div>
@@ -128,7 +106,7 @@
                         <h3 class="h6 mt-4">Follow us</h3>
                         <ul class="social-media">
                             <li><a href="https://www.facebook.com/bangladeshnavy.mil.bd" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-x-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
                             <li><a href="https://www.youtube.com/@bangladeshnavy4191" target="_blank"><i class="fab fa-youtube"></i></a></li>
                             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                         </ul>
@@ -138,10 +116,20 @@
                 <div class="col-md-4 col-lg-3">
                     <div class="footer-widget">
                         <h3 class="widget-title">Contact</h3>
-                        <ul>
-                            <li><i class="fas fa-location-pin"></i> BNFWA Central Office<br>Naval Headquarters,<br>Banani, Dhaka-1213</li>
-                            <li><i class="fas fa-phone-alt"></i> Treasurer <a href="#">+88 01769-702716</a></li>
-                            <li><i class="fas fa-envelope"></i> <a href="mailto:bnfwa@navy.mil.bd">bnfwa@navy.mil.bd</a></li>
+                        <ul class="widget-address">
+                            <li>
+                                <a href="#"><i class="fas fa-location-pin"></i>
+                                    BNFWA Central Office <br>
+                                    Naval Headquarters,<br>
+                                    Banani, Dhaka-1213
+                                </a>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i> Treasurer <a href="#">+88 01769-702716</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-envelope"></i> bnfwa@navy.mil.bd</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -149,7 +137,7 @@
                 <div class="col-md-3">
                     <div class="footer-widget">
                         <h3 class="widget-title">About Us</h3>
-                        <ul>
+                        <ul class="widget-menu">
                             <li><i class="fa fa-chevron-right"></i> <a href="{{ url('history') }}">History of BNFWA</a></li>
                             <li><i class="fa fa-chevron-right"></i> <a href="{{ url('chief-message') }}">Chief Patron's Message</a></li>
                             <li><i class="fa fa-chevron-right"></i> <a href="{{ url('president') }}">President's Statement</a></li>
@@ -163,7 +151,7 @@
                 <div class="col-md-3">
                     <div class="footer-widget">
                         <h3 class="widget-title">What We Do</h3>
-                        <ul>
+                        <ul class="widget-menu">
                             <li><i class="fa fa-chevron-right"></i> <a href="{{ url('role-of-bnfwa') }}">Role of BNFWA</a></li>
                             <li><i class="fa fa-chevron-right"></i> <a href="{{ url('ladies-club') }}">BN Ladies Club</a></li>
                             <li><i class="fa fa-chevron-right"></i> <a href="{{ url('shishu-niketon') }}">Nou Paribar Shishu Niketon School</a></li>
@@ -178,8 +166,10 @@
     </div>
 
     <div class="footer-copyright">
-        <div class="container-xl text-center">
-            &copy; Copyright Bangladesh Navy
+        <div class="container-xl">
+            <div class="row">
+                <div class="col">&copy; Copyright Bangladesh Navy</div>
+            </div>
         </div>
     </div>
 </footer>

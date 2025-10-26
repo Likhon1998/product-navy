@@ -21,4 +21,30 @@ class PageController extends Controller
     {
         return view('pages.chief-message');
     }
+
+    public function contact()
+    {
+        return view('pages.contact');
+    }
+
+    public function dayCareCentre()
+    {
+        return view('pages.day-care-centre');
+    }
+
+    public function events()
+    {
+        return view('pages.events');
+    }
+
+    public function formerPresident()
+    {
+        return view('pages.former-president');
+    }
+
+    public function gallery()   
+    {
+        return view('pages.gallery');
+    }
+
 }
