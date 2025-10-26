@@ -47,4 +47,44 @@ class PageController extends Controller
         return view('pages.gallery');
     }
 
+    public function president()
+    {
+        return view('pages.president');
+    }
+
+    public function galleryImages()
+    {
+        return view('pages.gallery-images');
+    }
+
+    public function history()
+    {
+        return view('pages.history');
+    }   
+
+    public function index()
+    {
+        return view('pages.index');
+    }
+
+    public function je_tc()
+    {
+        return view('pages.je-tc');
+    }
+
+    public function ladiesClub()
+    {
+        return view('pages.ladies-club');
+    }
+
+    public function magazine()
+    {
+        return view('pages.magazine');
+    }
+
+    public function news()
+    {
+        return view('pages.news');
+    }
+
 }

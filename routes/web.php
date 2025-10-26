@@ -15,6 +15,18 @@ Route::get('/day-care-centre', [PageController::class, 'dayCareCentre'])->name('
 Route::get('/events', [PageController::class, 'events'])->name('events');
 Route::get('/former-president', [PageController::class, 'formerPresident'])->name('former-president');
 Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
+Route::get('/president', [PageController::class, 'president'])->name('president');
+Route::get('/gallery-images', [PageController::class, 'galleryImages'])->name('gallery.images');
+Route::get('/history', [PageController::class, 'history'])->name('history');
+Route::get('/index', [PageController::class, 'index'])->name('index');
+Route::get('/jc-tc', [PageController::class, 'je_tc'])->name('jc-tc');
+Route::get('/ladies-club', [PageController::class, 'ladiesClub'])->name('ladies-club');
+Route::get('/magazine', [PageController::class, 'magazine'])->name('magazine');
+Route::get('/news', [PageController::class, 'news'])->name('news');
+
+
+
+
 
 
 // Admin panel routes (only for authenticated users)
