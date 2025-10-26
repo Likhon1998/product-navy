@@ -3,24 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\PageController;
 
+// Public home page
+Route::get('/', [PageController::class, 'home'])->name('home');
 
-Route::get('/', [ProductController::class, 'index'])->name('home');
-
-// Admin panel routes (only for authenticated users)
+// Admin panel routes
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
-
     // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-    // Products CRUD
-    Route::get('/products', [ProductController::class, 'adminIndex'])->name('products.index');
-    Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
-    Route::post('/products', [ProductController::class, 'store'])->name('products.store');
-    Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
-    Route::put('/products/{product}', [ProductController::class, 'update'])->name('products.update');
-    Route::delete('/products/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
-
+    // Product CRUD
+    Route::resource('products', ProductController::class)->except(['show']);
 });
 
 require __DIR__.'/auth.php';
