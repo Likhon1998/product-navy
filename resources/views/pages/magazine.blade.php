@@ -1,13 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title', 'Ship & Establishment Gallery')
-
-@push('styles')
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
-    <link href="{{ asset('assets/css/lightbox.css') }}" rel="stylesheet"/>
-@endpush
+@section('title', 'Magazine')
 
 @section('content')
 
@@ -40,7 +33,7 @@
             <div class="main-header-inner">
                 <div class="header-logo">
                     <a href="{{ url('/') }}">
-                        <img src="{{ asset('assets/images/logo-home.svg') }}" alt="BNFWA" height="55" width="219"/>
+                        <img alt="BNFWA" height="55" width="219" src="{{ asset('assets/images/logo-home.svg') }}"/>
                     </a>
                 </div>
                 <div class="header-notices">
@@ -54,7 +47,9 @@
                     </p>
                 </div>
                 <div class="floating-menu-trigger">
-                    <button><span></span></button>
+                    <button>
+                        <span></span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -65,7 +60,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>Gallery</h1>
+                <h1> <span class="lang-en">Magazine</span><span class="lang-bn">ম্যাগাজিন</span> </h1>
             </div>
         </div>
     </div>
@@ -74,18 +69,12 @@
 <main>
     <section class="page-section">
         <div class="container">
-            <div class="row row-gap-4 justify-content-center">
-                <div class="col">
-                    <div class="image-gallery-wrapper">
-                        @for ($i = 1; $i <= 25; $i++)
-                            <div class="gallery-box">
-                                <a data-lightbox="Ship-Establishment"
-                                   data-title="My caption"
-                                   href="{{ asset("assets/images/gallery/photo-gallery-$i.jpg") }}">
-                                    <img src="{{ asset("assets/images/gallery/photo-gallery-$i.jpg") }}" alt="">
-                                </a>
-                            </div>
-                        @endfor
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card">
+                        <div class="card-body p-5">
+                            <p>Under Construction</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,10 +90,10 @@
                     <div class="footer-widget">
                         <div class="logo-blink">
                             <a href="https://joinnavy.navy.mil.bd/" target="_blank">
-                                <img src="{{ asset('assets/images/logo-footer.svg') }}" alt="BNFWA" height="55" width="219"/>
+                                <img alt="BNFWA" height="55" width="219" src="{{ asset('assets/images/logo-footer.svg') }}"/>
                             </a>
                         </div>
-                        <h3 class="h6 mt-4">Follow us</h3>
+                        <h3 class="h6 mt-4">Follow us </h3>
                         <ul class="social-media">
                             <li><a href="https://www.facebook.com/bangladeshnavy.mil.bd" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a></li>
@@ -113,14 +102,14 @@
                         </ul>
                     </div>
                 </div>
-
+                
                 <div class="col-md-4 col-lg-3">
                     <div class="footer-widget">
                         <h3 class="widget-title">Contact</h3>
                         <ul class="widget-address">
-                            <li><i class="fas fa-location-pin"></i> BNFWA Central Office<br>Naval Headquarters,<br>Banani, Dhaka-1213</li>
-                            <li><i class="fas fa-phone-alt"></i> Treasurer <a href="tel:+8801769702716">+88 01769-702716</a></li>
-                            <li><i class="fas fa-envelope"></i> <a href="mailto:bnfwa@navy.mil.bd">bnfwa@navy.mil.bd</a></li>
+                            <li><i class="fas fa-location-pin"></i> BNFWA Central Office, Naval Headquarters, Banani, Dhaka-1213</li>
+                            <li><i class="fas fa-phone-alt"></i> Treasurer <a href="">+88 01769-702716</a></li>
+                            <li><i class="fas fa-envelope"></i> <a href="">bnfwa@navy.mil.bd</a></li>
                         </ul>
                     </div>
                 </div>
@@ -129,12 +118,12 @@
                     <div class="footer-widget">
                         <h3 class="widget-title">About Us</h3>
                         <ul class="widget-menu">
-                            <li><i class="fa fa-chevron-right"></i> <a href="{{ url('history') }}">History of BNFWA</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="{{ url('chief-message') }}">Chief Patron's Message</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="{{ url('president') }}">President's Statement</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="{{ url('vision-mission') }}">Vision and Mission</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="{{ url('former-president') }}">Former President</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="{{ url('organization') }}">Organization</a></li>
+                            <li><a href="{{ url('history') }}">History of BNFWA</a></li>
+                            <li><a href="{{ url('chief-message') }}">Chief Patron's Message</a></li>
+                            <li><a href="{{ url('president') }}">President's statement</a></li>
+                            <li><a href="{{ url('vision-mission') }}">Vision and Mission</a></li>
+                            <li><a href="{{ url('former-president') }}">Former President</a></li>
+                            <li><a href="{{ url('organization') }}">Organization</a></li>
                         </ul>
                     </div>
                 </div>
@@ -143,18 +132,18 @@
                     <div class="footer-widget">
                         <h3 class="widget-title">What We Do</h3>
                         <ul class="widget-menu">
-                            <li><i class="fa fa-chevron-right"></i> <a href="{{ url('role-of-bnfwa') }}">Role of BNFWA</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="{{ url('ladies-club') }}">BN Ladies Club</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="{{ url('shishu-niketon') }}">Nou Paribar Shishu Niketon School</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="{{ url('ashar-alo') }}">Ashar Alo School</a></li>
-                            <li><i class="fa fa-chevron-right"></i> <a href="{{ url('day-care-centre') }}">Day Care Centre</a></li>
+                            <li><a href="{{ url('role-of-bnfwa') }}">Role of BNFWA</a></li>
+                            <li><a href="{{ url('ladies-club') }}">BN Ladies Club</a></li>
+                            <li><a href="{{ url('shishu-niketon') }}">Nou Paribar Shishu Niketon School</a></li>
+                            <li><a href="{{ url('ashar-alo') }}">Ashar Alo School</a></li>
+                            <li><a href="{{ url('day-care-centre') }}">Day Care Centre</a></li>
                         </ul>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
-
     <div class="footer-copyright">
         <div class="container-xl">
             <div class="row">
@@ -163,23 +152,5 @@
         </div>
     </div>
 </footer>
-@endsection
 
-@push('scripts')
-    <script src="{{ asset('assets/js/masonry.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets/js/lightbox.js') }}"></script>
-    <script>
-        jQuery(document).ready(function () {
-            jQuery('.image-gallery-wrapper').masonry({
-                itemSelector: '.gallery-box',
-                percentPosition: true,
-            });
-            setTimeout(function () {
-                jQuery('.image-gallery-wrapper').masonry({
-                    itemSelector: '.gallery-box',
-                    percentPosition: true,
-                });
-            }, 2000);
-        });
-    </script>
-@endpush
+@endsection
