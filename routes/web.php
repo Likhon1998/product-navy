@@ -7,6 +7,7 @@ use App\Http\Controllers\PageController;
 
 // Public home page
 Route::get('/', [PageController::class, 'home'])->name('home');
+Route::get('/ashar-alo', [PageController::class, 'asharAlo'])->name('ashar-alo');
 
 // Admin panel routes
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {

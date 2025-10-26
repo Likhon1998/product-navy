@@ -11,4 +11,9 @@ class PageController extends Controller
         $products = Product::latest()->get();
         return view('welcome', compact('products'));
     }
+
+     public function asharAlo()
+    {
+        return view('pages.ashar-alo');
+    }
 }
